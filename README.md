@@ -1,5 +1,23 @@
 # MAD_Workshop-01-Develop-an-android-application-to-pass-the-data-between-the-activities-using-Intent.
 
+## AIM:
+To develop an android application to pass the data between the activities using intent.
+
+## ALGORITHM:
+1.Create Layouts: Design layout files for both the input activity (MainActivity) and the display activity (DisplayActivity) using XML.
+
+2.Define UI Elements: In the MainActivity, define EditText fields for user input and a submit button. In the DisplayActivity, define TextViews to display the passed data.
+
+3.Retrieve User Input: In MainActivity, retrieve user input from EditText fields when the submit button is clicked.
+
+4.Create Intent: Create an Intent object in MainActivity and put the data as extras using putExtra() method.
+
+5.Start Activity: Start the DisplayActivity by calling startActivity() and passing the Intent object.
+
+6.Retrieve Data: In DisplayActivity, retrieve the data passed from MainActivity using getIntent() and getStringExtra() methods.
+
+7.Display Data: Set the retrieved data to the respective TextViews in DisplayActivity.
+
 ## MainActivity.java:
 ```java
 package com.example.mad_workshop1;
@@ -49,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
 ```
 
 ## activity_main.xml:
-
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -154,8 +171,8 @@ public class DisplayActivity extends AppCompatActivity {
     }
 }
 ```
-## activity_display.xml:
 
+## activity_display.xml:
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -234,7 +251,9 @@ public class DisplayActivity extends AppCompatActivity {
 </manifest>
 ```
 
-# OUTPUT:
+## OUTPUT:
 ![O/P](https://github.com/SudharsanamRK/MAD_Workshop-01-Develop-an-android-application-to-pass-the-data-between-the-activities-using-Intent./assets/115523484/a0d89399-d487-4d28-96ca-1a1232fd0356)
 ![USER O/P](https://github.com/SudharsanamRK/MAD_Workshop-01-Develop-an-android-application-to-pass-the-data-between-the-activities-using-Intent./assets/115523484/c17a115e-2086-452a-ab0e-a6f26ece1d49)
 
+## RESULT:
+Data entered in MainActivity is successfully passed to DisplayActivity and displayed in respective TextViews.
